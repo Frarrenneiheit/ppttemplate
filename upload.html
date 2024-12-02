@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel zu PowerPoint Konverter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .upload-container {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Excel zu PowerPoint Konverter</h1>
+    
+    <div class="upload-container">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="excel_file">Excel-Datei auswählen:</label>
+                <input type="file" id="excel_file" name="excel_file" accept=".xlsx,.xls" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ppt_template">PowerPoint-Template auswählen:</label>
+                <input type="file" id="ppt_template" name="ppt_template" accept=".pptx" required>
+            </div>
+            
+            <button type="submit">Konvertieren</button>
+        </form>
+    </div>
+</body>
+</html>
